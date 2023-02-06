@@ -1,5 +1,11 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
 
 
 body {
@@ -14,13 +20,18 @@ body {
     transform: translate(-50%, -50%);
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
+    max-width: 375px;
 }
 
-img {
+#image-mobile {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-bottom: 10px;
+}
+
+#image-desktop {
+    display: none;
 }
 
 button {
@@ -31,7 +42,8 @@ button {
     font-size: 10px !important;
 }
 
-p, h3 {
+p,
+h3 {
     padding: 0 14px;
     text-align: left;
 }
@@ -60,4 +72,81 @@ h3 {
 .price-2 {
     margin-top: 5px;
     text-decoration: line-through;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1440px) {
+
+    .card-container {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row;
+        height: 300px;
+    }
+
+    #image-mobile {
+        display: none;
+    }
+
+    #image-desktop {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        display: block;
+        height: auto;
+    }
+
+    button {
+        margin: 0 auto;
+        display: block;
+        width: 90% !important;
+        margin-bottom: 15px !important;
+        font-size: 10px !important;
+    }
+
+    p,
+    h3 {
+        padding: 0 14px;
+        text-align: left;
+    }
+
+    p {
+        font-family: 'Montserrat', sans-serif;
+        color: hsl(228, 12%, 48%);
+        font-size: 10px;
+    }
+
+    h3 {
+        font-family: 'Fraunces', serif;
+        font-size: 18px !important;
+    }
+
+    .prices {
+        display: flex;
+        margin-left: 12px;
+    }
+
+    .price-1 {
+        font-family: 'Fraunces', serif;
+        color: #198754;
+    }
+
+    .price-2 {
+        margin-top: 5px;
+        text-decoration: line-through;
+    }
+
+    .text-container {
+        background-color: white;
+        width: auto;
+        height: auto;
+        margin-top: 25px;
+        border-bottom-right-radius: 10px !important;
+        padding: 0 5px;
+    }
+
 }
