@@ -3,7 +3,7 @@
 
 
 body {
-    background-color: hsl(30, 38%, 92%);
+    background-color: hsl(30, 38%, 92%) !important;
 }
 
 .card-container {
@@ -20,10 +20,44 @@ img {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin-bottom: 10px;
 }
 
 button {
     margin: 0 auto;
     display: block;
+    width: 90% !important;
+    margin-bottom: 15px !important;
+    font-size: 10px !important;
+}
 
+p, h3 {
+    padding: 0 14px;
+    text-align: left;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-size: 10px;
+}
+
+h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 18px !important;
+}
+
+.prices {
+    display: flex;
+    margin-left: 12px;
+}
+
+.price-1 {
+    font-family: 'Fraunces', serif;
+    color: #198754;
+}
+
+.price-2 {
+    margin-top: 5px;
+    text-decoration: line-through;
 }
